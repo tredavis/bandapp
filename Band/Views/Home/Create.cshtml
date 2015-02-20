@@ -1,0 +1,18 @@
+﻿@model Band.Models.BandViewModel
+@{
+    ViewBag.Title = "Create";
+}
+<div class="container">
+    <h2>Create</h2>
+
+    <div class="well-lg">
+        @using (Html.BeginForm())
+        {
+            @*<div> Title <br /> @Html.TextBoxFor(m => m.BandId) @Html.ValidationMessageFor(m => m => m.BandId) </div>*@
+            <div> Band Name <br /> @Html.TextBoxFor(m => m.BandName) @Html.ValidationMessageFor(m => m.BandName) </div>
+            <div> Genre <br /> @Html.TextBoxFor(m => m.Genre) @Html.ValidationMessageFor(m => m.Genre) </div>
+            <div> Rating <br /> @Html.TextBoxFor(m => m.Rating) @Html.ValidationMessageFor(m => m.Rating) </div>
+            <div> <input type="submit" value="Created" /> </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿@model Band.Models.BandListViewModels
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h3> Ay Yo, @Model.UserName</h3>
+<h4>The Average Movie Rating is "@Model.AverageRating"</h4>
+<div>
+    @Html.ActionLink("Create a Book!", "Create")
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @foreach (var m in Model.Bands)
+        {
+            <h2>@m.BandName</h2>
+            <h3>@m.Genre</h3>
+            <div><img src="@m.BandImage" width="300" height="400" /></div>
+            <div>Rating: @m.Rating</div>
+        }
+
+    </div>
+</div>
